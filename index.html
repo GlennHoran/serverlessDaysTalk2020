@@ -1,89 +1,83 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+	<title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/custom.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<img src="img/AWSCommunityDay2.png"/>
-				</section>
-				<section>Talks
-					<section>Modernizing Home & Health using AR/VR, Serverless and IoT</section>
-					<section>Modernizing Home & Health using AR/VR, Serverless and IoT part 1</section>
-					<section>Modernizing Home & Health using AR/VR, Serverless and IoT part 2</section>
-				</section>
-				<section>Talks
-					<section>Fresh perspectives on diversity & inclusivity in tech</section>
-					<section>Fresh perspectives on diversity & inclusivity in tech part 1</section>
-					<section>Fresh perspectives on diversity & inclusivity in tech part 2</section>
-				</section>
-				<section>Talks
-					<section>Developing Doom. Programming Principles from the early days of ID Software</section>
-					<section>Developing Doom. Programming Principles from the early days of ID Software part 1</section>
-					<section>Developing Doom. Programming Principles from the early days of ID Software part 2</section>
-				</section>
-				<section>Talks
-					<section>Real Time Processing using Lambda and Kinesis</section>
-					<section>Real Time Processing using Lambda and Kinesis part 1</section>
-					<section>Real Time Processing using Lambda and Kinesis part 2</section>
-				</section>
-
-
-
-
-
-					<section>Workshop
-				<section><img src="img/Serverless.png"/></section>
-				<section>Workshop Stuff 1</section>
-				<section>Worshop Stuff 2</section>
-				<section>Workshop Stuff 3</section>
-					</section>
-
-                    <section>Craic
-						<section></section>
-						<section><img src="img/doom1.jpeg"/></section>
-						<section><img src="img/craic1.jpg"/></section>
-						<section><img src="img/craic2.jpg"/></section>
-                    </section>
-
+	<!-- Printing and PDF exports -->
+	<script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<div>
+				<h2>56 lines of CFT to 2 lines of Serverless - a lesson from a noob on the frontlines</h2>
+				Glenn Horan - @batGlenn13
 			</div>
-		</div>
+			ServerlessDays Jan 2020
+			<br/>
+			<br/>
+			<img src="img/LibertyLogo.png" width = 200em>
+		</section>
+		<section>
+			intro - What rating team does, Liberty uses cloud formation for security reasons and version control
+		</section>
+		<section>
+			Architecture of what needed done
+			CFT - I like to have context for things decided to use CFT before picking up serverless
+		</section>
+		<section>
+			<section> Run through CFT bit by bit - use fragments to split up reveal of different code? </section>
+			<section data-background="img/hellImLiving.gif"></section>
+			<section> Maybe start with vanilla CFT, then build up permissions etc</section>
+			<section> Slide showing commits = "cft changes, cft changes, minor cft changes etc."</section>
+		</section>
+		<section>
+			Big reveal - serverless code, 2 lines maybe show pages from the aws console
+		</section>
+		<section>
+			Serverless side by side to cft
+		</section>
+		<section>
+			Adding complexity to finish out story - filter for folders
+		</section>
+		<section data-background="img/doom.gif" data-background-transition="zoom" >
+			<section><h2 class="fragment fade-up visible">Craic</h2></section>
+		</section>
 
-		<script src="js/reveal.js"></script>
+	</div>
+</div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+    });
+</script>
+</body>
 </html>
