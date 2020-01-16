@@ -25,9 +25,10 @@
 <body>
 <div class="reveal">
 	<div class="slides">
-		<section>
+		<section data-notes="it's hard to join full stack - so many technologies coming in at the middle. When I'm faced with a decision I like to know why I'm using something
+			In this case the hot framework was Serverless. But I wanted to know why not CFT">
 			<div>
-				<h2>56 lines of CFT to 2 lines of Serverless - a lesson from a noob on the frontlines</h2>
+				<h2 >56 lines of CFT to 2 lines of Serverless - a lesson from a noob on the frontlines</h2>
 				Glenn Horan - @batGlenn13
 			</div>
 			ServerlessDays Jan 2020
@@ -36,17 +37,78 @@
 			<img src="img/LibertyLogo.png" width = 200em>
 		</section>
 		<section>
-			intro - What rating team does, Liberty uses cloud formation for security reasons and version control
+			<div>
+				<h2 >144 lines of CFT to 2 lines of Serverless - a lesson from a noob on the frontlines</h2>
+				Glenn Horan - @batGlenn13
+			</div>
+			ServerlessDays Jan 2020
+			<br/>
+			<br/>
+			<img src="img/LibertyLogo.png" width = 200em>
 		</section>
 		<section>
-			Architecture of what needed done
-			CFT - I like to have context for things decided to use CFT before picking up serverless
+			<div>
+				<h2>How I learned to stop worrying and love Serverless</h2>
+				Glenn Horan - @batGlenn13
+			</div>
+			ServerlessDays Jan 2020
+			<br/>
+			<br/>
+			<img src="img/LibertyLogo.png" width = 200em>
 		</section>
 		<section>
-			<section> Run through CFT bit by bit - use fragments to split up reveal of different code? </section>
-			<section data-background="img/hellImLiving.gif"></section>
-			<section> Maybe start with vanilla CFT, then build up permissions etc</section>
-			<section> Slide showing commits = "cft changes, cft changes, minor cft changes etc."</section>
+			The rating team
+			<section>
+				<div class="horizontal-image-container">
+					<div class="horizontal-image">
+						<div class="fragment fade-in-then-semi-out visible">
+							User fills out details
+							<img  src="img/ui.png" >
+						</div>
+					</div>
+					<div class="horizontal-image">
+						<div class="fragment fade-in-then-semi-out visible">
+							Details hit our rating sheets
+							<img  src="img/excel.png" width = "75%">
+						</div>
+					</div>
+					<div class="horizontal-image">
+						<div class="fragment fade-in-then-semi-out visible">
+							User gets price as output
+							<img  src="img/thumbsUp.gif" >
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+		<section>
+			The task at hand:
+			<section>
+				<ul>
+					<br>
+					<li class="fragment fade-up">Our rating spreadsheets are updated frequently</li>
+					<br>
+				<li class="fragment fade-up">Spreadsheets are stored in S3</li>
+				<br>
+				<li class="fragment fade-up">Event driven process needed to inform our Software of changes</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			Run through different architecture - Bucket to HTTP didn't exist. Choice between Bucket to SNS Topic or bucket to Lambda, I opted for Bucket to SNS topic
+		</section>
+		<section data-notes="Mention how we tried a sns topic - http event">
+			<div>
+				We came up with this
+			</div>
+			<img src="img/architecture1.png" height="500em">
+		</section>
+		<section>
+			<section> Run through increasingly complex CFT </section>
+			<section> KMS </section>
+			<section>Bucket policy </section>
+			<section> Circular dependency errors</section>
+			<section> </section>
 		</section>
 		<section>
 			Big reveal - serverless code, 2 lines maybe show pages from the aws console

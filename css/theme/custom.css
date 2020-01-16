@@ -254,6 +254,16 @@ body {
 .reveal .controls {
     color: #42affa; }
 
+.reveal .horizontal-image-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.reveal .horizontal-image {
+    width: 33%;
+    padding: 0.25em
+}
+
 /*********************************************
  * PROGRESS BAR
  *********************************************/
